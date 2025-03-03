@@ -79,7 +79,7 @@ end top_basys3;
 architecture top_basys3_arch of top_basys3 is 
 	component sevenseg_decoder
         port(
-            i_Hex : in std_logic_vector(3 downto 0) := "0000";
+            i_Hex : in std_logic_vector(3 downto 0);
             o_seg_n : out std_logic_vector(6 downto 0));
      end component;
   -- declare the component of your top-level design
@@ -99,7 +99,7 @@ begin
 	       i_Hex => sw,
 	       o_seg_n => s_seg
 	       );
-	       seg <= not s_seg;
+	       seg <= s_seg;
 	
 	
 	-- CONCURRENT STATEMENTS ----------------------------
