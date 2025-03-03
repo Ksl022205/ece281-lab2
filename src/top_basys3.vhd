@@ -99,7 +99,7 @@ begin
 	       i_Hex => sw,
 	       o_seg_n => s_seg
 	       );
-	       seg <= s_seg;
+	       seg <= not s_seg;
 	
 	
 	-- CONCURRENT STATEMENTS ----------------------------
@@ -111,3 +111,4 @@ begin
 	w_out <= not btnC;
 	an <= (0 => w_out, others => '1');
 end top_basys3_arch;
+
