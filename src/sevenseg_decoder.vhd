@@ -37,6 +37,7 @@ entity sevenseg_decoder is
 end sevenseg_decoder;
 
 architecture Behavioral of sevenseg_decoder is
+    signal seg_corrected : STD_LOGIC_VECTOR (6 downto 0);
 begin
     with i_Hex select
     o_seg_n <= "1111110" when "0000",
@@ -56,5 +57,6 @@ begin
             "1001111" when "1110",
             "1000111" when "1111",
             "0000000" when others;
+     o_seg_n <= seg_corrected(0) & seg_corrected(1) & seg_corrected(2) & 
+               seg_corrected(3) & seg_corrected(4) & seg_corrected(5) & seg_corrected(6);
 end Behavioral;
-
