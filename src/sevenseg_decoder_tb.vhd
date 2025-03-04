@@ -52,7 +52,7 @@ begin
     begin
         -- Apply test cases for all hexadecimal values
         w_hex <= x"0"; wait for 10 ns;
-            assert w_seg_n = "1111110" report "Error on 0" severity failure;
+            assert w_seg_n = "0000001" report "Error on 0" severity failure;
         w_hex <= x"1"; wait for 10 ns;
             assert w_seg_n = "1001111" report "Error on 1" severity failure;
         w_hex <= x"2"; wait for 10 ns;
