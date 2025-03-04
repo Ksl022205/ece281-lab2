@@ -18,29 +18,18 @@
 -- 
 ----------------------------------------------------------------------------------
 
+
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 use IEEE.NUMERIC_STD.ALL;
 
 entity sevenseg_decoder_tb is
-    Port ( i_Hex : in STD_LOGIC_VECTOR (3 downto 0);
-           o_seg_n : out STD_LOGIC_VECTOR (6 downto 0));
 end sevenseg_decoder_tb;
 
 architecture Behavioral of sevenseg_decoder_tb is
     signal i_Hex : STD_LOGIC_VECTOR (3 downto 0);
     signal o_seg_n : STD_LOGIC_VECTOR (6 downto 0);
-
-begin
 
     -- Instantiate the Unit Under Test (UUT)
     component sevenseg_decoder
