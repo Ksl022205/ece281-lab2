@@ -1,23 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 03/02/2025 08:12:25 PM
--- Design Name: 
--- Module Name: sevenseg_decoder_tb - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -50,10 +30,8 @@ begin
             o_seg_n(3) => w_seg_n(3),
             o_seg_n(2) => w_seg_n(4),
             o_seg_n(1) => w_seg_n(5),
-            o_seg_n(0) => w_seg_n(6),
-            
-            
-        );
+            o_seg_n(0) => w_seg_n(6)
+            );
 
     -- Test process
     test_process : process
